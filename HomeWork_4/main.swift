@@ -36,12 +36,20 @@ var names = ["Aibek", "Ayaz", "Adilet", "Beka", "Vlad", "Gleb", "Galy"]
 var numChar = 0
 var num = 0
 func countNames () {
-    for i in names {
-        if i != "" && i != "," && i == "A" {
-            print("\(names[1]) \(names[2]) \(names[3])")
+    var a = 0
+    var b = 0
+    var v = 0
+    
+    for name in names {
+        if name.first?.uppercased() == "A" || name.first == "a" {
+            a += 1
+        } else if name.first == "B" {
+            b += 1
+        } else if name.first == "V" {
+            v += 1
         }
     }
+    
+    print("A:\(a), B:\(b). V: \(v)")
 }
 countNames()
-
-
