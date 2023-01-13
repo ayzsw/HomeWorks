@@ -32,24 +32,19 @@ for i in currency{
 
 //3) Создать массив имен учитывая алфавит. Пройтись циклом и считать сколько имен имеется на букву “A” и т.д.
 
+print("Введи букву ")
 var names = ["Aibek", "Ayaz", "Adilet", "Beka", "Vlad", "Gleb", "Galy"]
 var numChar = 0
 var num = 0
+var inputReadline = readLine()!
 func countNames () {
-    var a = 0
-    var b = 0
-    var v = 0
-    
+    var counter = 0
     for name in names {
-        if name.first?.uppercased() == "A" || name.first == "a" {
-            a += 1
-        } else if name.first == "B" {
-            b += 1
-        } else if name.first == "V" {
-            v += 1
+        if String(name.first!) == inputReadline {
+            counter += 1
         }
     }
     
-    print("A:\(a), B:\(b). V: \(v)")
+    print("На букву \(inputReadline) \(counter) имени")
 }
 countNames()
