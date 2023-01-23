@@ -9,12 +9,9 @@ func registration(){
     print("Введите имя")
     var username = readLine()!
     for (name, parol) in data {
-        if username == "Ayaz"{
+        if username == name{
             print("введите пароль")
-        }else if username == "Erjan"{
-            print("введите пароль")
-        }else if username == "Ihsan"{
-            print("введите пароль")
+            break
         }else if username != name{
             print("Создайте пароль")
         }
@@ -29,31 +26,17 @@ func registration(){
         print("Введите число")
     }
     for (name, parol) in data {
-        if pasword == "123456" {
+        if pasword == parol {
             print("Вы успешно вошли")
-            if pasword != "123456"{
+            break
+            if pasword != "123456" && pasword != "77779" && pasword != "112233"{
                 print("Непраильный пароль")
                 break
             }
-        }
-        if pasword == "777779" {
-            print("Вы успешно вошли")
-            if pasword != "777779"{
-                print("Неправильный пароль")
-            }
-        }
-        if pasword == "112233" {
-            print("Вы успешно вошли")
-            if pasword != "112233"{
-                print("Неправильный")
-            }
-            break
-        }
-        if pasword != parol{
+        }else if pasword != parol{
             print("Вы успешно зарегистрировались")
+            
         }
     }
-
-        
 }
 registration()
